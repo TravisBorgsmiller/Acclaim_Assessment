@@ -1,0 +1,16 @@
+<%= link_to 'HOME', '/' %>
+<body>
+
+  <h1>Recruits</h1>
+    <%= @recruits.map do |character| %>
+      <% if character.certified == false %>
+        <h3><%= link_to "Issue #{character.last_name} a badge?", "recruits/#{character.id}" %></h3>
+        <h2><%= character.last_name %></h2>
+        <p><%= image_tag(character.picture) %></p>
+      <% else character.certified == true %>
+        <h2><%= character.last_name %> is certified!</h2>
+        <p><%= image_tag(character.picture) %></p>
+      <% end %>
+    <% end %>
+
+</body>
