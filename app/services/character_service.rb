@@ -1,14 +1,5 @@
 class CharacterService
 
-  # def get_forecast_data(coordinates)
-  #   response = conn.get("onecall?") do |req|
-  #     req.params['lat'] = coordinates[:lat]
-  #     req.params['lon'] = coordinates[:lng]
-  #     req.params['units'] = 'imperial'
-  #   end
-  #   JSON.parse(response.body, symbolize_names: true)
-  # end
-
   def get_character_data
     response = conn.get do |req|
       req.params['limit'] = 1
