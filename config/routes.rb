@@ -2,5 +2,8 @@
 
 Rails.application.routes.draw do
   root to: 'static_pages#home'
-  get 'character', to: 'character#show'
+  get 'recruits', to: 'recruit#index'
+  get 'recruits/:id', to: 'recruit#show'
+  get 'characters', to: 'character#show'
+  post 'characters', to: 'character#create'
 end
