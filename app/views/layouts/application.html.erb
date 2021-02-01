@@ -10,6 +10,18 @@
   </head>
 
   <body>
+<style media="screen">
+  body {
+    background-color: #DCDCDC;
+  }
+
+</style>
+    <div id="flashMessage">
+      <% flash.each do |type, message| %>
+        <h1><%= message %></h1>
+      <% end %>
+    </div>
+
     <!-- load React header component instead -->
     <%#= javascript_pack_tag "credly_take_home_header" %>
 
