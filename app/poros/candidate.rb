@@ -1,4 +1,4 @@
-class Character
+class Candidate
   attr_reader :name, :comics, :picture
 
   def initialize(name, comics, picture)
