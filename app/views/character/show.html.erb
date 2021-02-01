@@ -1,6 +1,10 @@
+<%= link_to 'HOME', '/' %>
 <h1>Character Show Page</h1>
 
-<h3>Character: <%= @character.name %><br></h3>
-<h3>Number of Comics: <%= @character.comics %><br></h3>
+<h3>Character: <%= @candidate.name %><br></h3>
+<h3>Number of Comics: <%= @candidate.comics %><br></h3>
 
-<%= image_tag(@character.picture) %>
+<%= image_tag(@candidate.picture) %>
+
+<%= button_to 'Recruit Candidate', characters_path %>
+<%= link_to 'Find New Candidate', '/characters' %>
