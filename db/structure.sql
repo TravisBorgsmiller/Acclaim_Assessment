@@ -32,11 +32,12 @@ CREATE TABLE public.ar_internal_metadata (
 CREATE TABLE public.characters (
     id bigint NOT NULL,
     email character varying,
-    badge_id character varying,
+    picture character varying,
     first_name character varying,
     last_name character varying,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    certified boolean DEFAULT false
 );
 
 
@@ -106,6 +107,7 @@ ALTER TABLE ONLY public.schema_migrations
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
-('20210201025807');
+('20210201025807'),
+('20210201074613');
 
 
