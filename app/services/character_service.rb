@@ -20,7 +20,7 @@ class CharacterService
     picture_path = character_info[:data][:results][0][:thumbnail][:path]
     picture_extension = character_info[:data][:results][0][:thumbnail][:extension]
     picture = picture_path + "." + picture_extension
-    Character.new(name, comics, picture)
+    Candidate.new(name, comics, picture)
   end
 
   def conn
